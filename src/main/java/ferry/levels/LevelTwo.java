@@ -17,7 +17,7 @@ public class LevelTwo {
                 leftParking[i][j] = new ParkingSpace();
                 leftParking[i][j].setParkingType(ParkingSpace.ParkingTypeE.TRUCK);
                 rightParking[i][j] = new ParkingSpace();
-                rightParking[i][j].setParkingType(ParkingSpace.ParkingTypeE.TRUCK );
+                rightParking[i][j].setParkingType(ParkingSpace.ParkingTypeE.TRUCK);
             }
         }
     }

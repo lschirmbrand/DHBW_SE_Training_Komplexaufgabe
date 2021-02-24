@@ -1,18 +1,50 @@
 ferry/IFerry.java
  ferry.IFerry
-vehicle/Truck.java
- vehicle.Truck
+ferry/Ferry.java
+ ferry.Ferry
+waitingspace/IWaitingSpace.java
+ waitingspace.IWaitingSpace
+parking/ParkingSpace.java
+ parking.ParkingSpace
+ parking.ParkingSpace$ParkingTypeE
 vehicle/Car.java
  vehicle.Car
-Application.java
- Application
+ferry/levels/LevelTwo.java
+ ferry.levels.LevelTwo
+ferry/levels/LevelOne.java
+ ferry.levels.LevelOne
+controlcenter/commands/MoveCommand.java
+ controlcenter.commands.MoveCommand
+configuration/Configuration.java
+ configuration.Configuration
 vehicle/Motorbike.java
  vehicle.Motorbike
 vehicle/IVehicle.java
  vehicle.IVehicle
-ferry/levels/LevelOne.java
- ferry.levels.LevelOne
-ferry/levels/LevelTwo.java
- ferry.levels.LevelTwo
-ferry/Ferry.java
- ferry.Ferry
+vehicle/Truck.java
+ vehicle.Truck
+trafficLight/TrafficLight.java
+ trafficLight.TrafficLight
+ trafficLight.TrafficLight$TrafficLightStateE
+barrier/IBarrier.java
+ barrier.IBarrier
+barrier/commands/BarrierUpCommand.java
+ barrier.commands.BarrierUpCommand
+trafficLight/ITrafficLight.java
+ trafficLight.ITrafficLight
+controlcenter/IControlCenter.java
+ controlcenter.IControlCenter
+barrier/commands/BarrierDownCommand.java
+ barrier.commands.BarrierDownCommand
+barrier/Barrier.java
+ barrier.Barrier
+controlcenter/commands/ICommand.java
+ controlcenter.commands.ICommand
+waitingspace/WaitingSpace.java
+ waitingspace.WaitingSpace
+controlcenter/commands/StartWeightCalculationCommand.java
+ controlcenter.commands.StartWeightCalculationCommand
+controlcenter/ControlCenter.java
+ controlcenter.ControlCenter
+Application.java
+ Application

@@ -1,5 +1,7 @@
 package vehicle;
 
 public interface IVehicle {
-    public void receiveWeight();
+    public int getWeigth();
+    public void setID(int id);
+    public int getID();
 }
