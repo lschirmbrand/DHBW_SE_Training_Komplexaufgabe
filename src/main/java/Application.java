@@ -1,28 +1,31 @@
-import barrier.Barrier;
-import barrier.commands.*;
 import controlcenter.ControlCenter;
-import controlcenter.commands.*;
-import trafficLight.TrafficLight;
-import trafficLight.commands.*;
+import controlcenter.commands.StartFerryFillingCommand;
+import controlcenter.commands.StartWeightCalculationCommand;
+import ferry.Ferry;
 import waitingspace.WaitingSpace;
 
 public class Application {
     public static void main(String[] args) {
-        WaitingSpace waitingSpace = new WaitingSpace();
+
+        // Create new Ferry
+        Ferry ferry = new Ferry();
+
+        // Create Waitingspace and hand it the created ferry
+        WaitingSpace waitingSpace = new WaitingSpace(ferry);
+
+        // Create a ControlCenter and hand it control of the waitingspace
         ControlCenter controlCenter = new ControlCenter(waitingSpace);
+
+        //Instantiate two init-Commands
         StartWeightCalculationCommand startWeightCalculationCommand = new StartWeightCalculationCommand(controlCenter);
-        MoveCommand moveCommand = new MoveCommand(controlCenter);
-        Barrier barrier = new Barrier();
-        BarrierUpCommand barrierUpCommand = new BarrierUpCommand(barrier);
-        BarrierDownCommand barrierDownCommand = new BarrierDownCommand(barrier);
+        StartFerryFillingCommand startFerryFilling = new StartFerryFillingCommand(controlCenter);
 
-        TrafficLight trafficLight = new TrafficLight();
-        TrafficLightGreen trafficLightGreen = new TrafficLightGreen(trafficLight);
-        TrafficLightOrange trafficLightOrange = new TrafficLightOrange(trafficLight);
-        TrafficLightRed trafficLightRed = new TrafficLightRed(trafficLight);
-
-
+        // Start the weightCalculation
         startWeightCalculationCommand.execute();
+
+        // Start filling the ferry
+        startFerryFilling.execute();
+
     }
 
 }

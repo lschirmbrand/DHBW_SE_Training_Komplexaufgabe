@@ -1,18 +1,12 @@
 package parking;
 
+import vehicles.Vehicle;
+
 public class ParkingSpace {
 
-    public enum ParkingTypeE{
-        TRUCK, CAR, MOTORBIKE, ALL
-    }
+    private Vehicle vehicle;
 
-    public ParkingTypeE getParkingType() {
-        return parkingType;
+    public void parkVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
-
-    public void setParkingType(ParkingTypeE parkingType) {
-        this.parkingType = parkingType;
-    }
-
-    private ParkingTypeE parkingType;
 }

@@ -2,10 +2,10 @@ package controlcenter.commands;
 
 import controlcenter.ControlCenter;
 
-public class StartWeightCalculationCommand implements ICommand{
-    public ControlCenter controlCenter;
+public class StartWeightCalculationCommand implements ICommand {
+    private final ControlCenter controlCenter;
 
-    public StartWeightCalculationCommand(ControlCenter controlCenter){
+    public StartWeightCalculationCommand(ControlCenter controlCenter) {
         this.controlCenter = controlCenter;
     }
 
